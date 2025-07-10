@@ -5,6 +5,8 @@
   background-color: #1e1e2f;
   padding: 1rem 2rem;
   color: white;
+  position: relative;
+  z-index: 10;
 }
 
 .logo {
@@ -32,4 +34,27 @@
 .active {
   color: #00d8ff;
   border-bottom: 2px solid #00d8ff;
+}
+/* Responsive nav menu for mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .navLinks {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1e1e2f;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    display: none;
+    padding: 1rem 0;
+  }
+
+  .navLinks.show {
+    display: flex;
+  }
 }

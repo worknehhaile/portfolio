@@ -1,50 +1,45 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./NavBar.module.css";
+
 const NavBar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen((prev) => !prev);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <nav className={styles.navbar}>
       <div className={styles.logo}>MyPortfolio</div>
-      <ul className={styles.navLinks}>
-        <li>
-          <NavLink
-            to="/"
-            className={({ isActive }) => (isActive ? styles.active : "")}
-          >
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/about"
-            className={({ isActive }) => (isActive ? styles.active : "")}
-          >
-            About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/skills"
-            className={({ isActive }) => (isActive ? styles.active : "")}
-          >
-            Skills
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/projects"
-            className={({ isActive }) => (isActive ? styles.active : "")}
-          >
-            Projects
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            to="/contacts"
-            className={({ isActive }) => (isActive ? styles.active : "")}
-          >
-            Contacts
-          </NavLink>
-        </li>
+      <div className={styles.hamburger} onClick={toggleMenu}>
+        <span className={isOpen ? styles.barOpen : styles.bar}></span>
+        <span className={isOpen ? styles.barOpen : styles.bar}></span>
+        <span className={isOpen ? styles.barOpen : styles.bar}></span>
+      </div>
+      <ul className={`${styles.navLinks} ${isOpen ? styles.show : ""}`}>
+        {["/", "/about", "/skills", "/projects", "/contacts"].map(
+          (path, idx) => {
+            const label = ["Home", "About", "Skills", "Projects", "ContactMe"][
+              idx
+            ];
+            return (
+              <li key={path}>
+                <NavLink
+                  to={path}
+                  className={({ isActive }) => (isActive ? styles.active : "")}
+                  onClick={closeMenu}
+                >
+                  {label}
+                </NavLink>
+              </li>
+            );
+          }
+        )}
       </ul>
     </nav>
   );
