@@ -35,6 +35,13 @@
   color: #00d8ff;
   border-bottom: 2px solid #00d8ff;
 }
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
 /* Responsive nav menu for mobile */
 @media (max-width: 768px) {
   .hamburger {
