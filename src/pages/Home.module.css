@@ -1,0 +1,159 @@
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(to bottom right, #1e1e2f, #2c2c3e);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.content {
+  max-width: 700px;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.profileImage {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border: 3px solid #00d8ff;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  color: #00d8ff;
+}
+
+h2 {
+  font-size: 1.6rem;
+  color: #00d8ff;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  display: inline-block;
+  background-color: #00d8ff;
+  color: #1e1e2f;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+  background-color: #00c0e2;
+}
+
+/* ✨ Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ⌨️ Typewriter effect */
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #00d8ff;
+  width: 0;
+  animation: typing 3s steps(22, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 270px;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 600px) {
+  .profileImage {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.socials a {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #00d8ff;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.resume {
+  display: inline-block;
+  background-color: transparent;
+  color: #00d8ff;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #00d8ff;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.resume:hover {
+  background-color: #00d8ff;
+  color: #1e1e2f;
+}
+body.dark .cta {
+  background-color: #00d8ff;
+  color: #121212;
+}
