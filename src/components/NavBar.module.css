@@ -5,8 +5,9 @@
   background-color: #1e1e2f;
   padding: 1rem 2rem;
   color: white;
-  position: relative;
+  /* position: relative; */
   z-index: 10;
+  /* position: fixed; */
 }
 
 .logo {

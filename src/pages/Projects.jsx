@@ -8,7 +8,7 @@ const projects = [
       "A digital platform that automates traditional rotating savings and credit associations in Ethiopia.",
     tech: ["React", "CSS Modules", "Context API"],
     link: "https://github.com/your-username/equb-system",
-    preview: "/images/equb.png", // Add screenshot or logo in public/images
+    // preview: "/images/equb.png",
   },
   {
     title: "Portfolio Website",
@@ -16,7 +16,7 @@ const projects = [
       "A responsive, animated personal website built with React, showcasing my skills and projects.",
     tech: ["React", "AOS", "CSS Modules"],
     link: "https://your-portfolio.netlify.app",
-    preview: "/images/portfolio.png",
+    // preview: "/images/portfolio.png",
   },
   {
     title: "Job Posting Platform",
@@ -24,7 +24,7 @@ const projects = [
       "A job board admin panel with filtering, sorting, and status management features.",
     tech: ["React", "Modular CSS", "Pagination"],
     link: "https://github.com/your-username/job-posting-platform",
-    preview: "/images/job-posting.png",
+    // preview: "/images/job-posting.png",
   },
 ];
 
@@ -44,6 +44,11 @@ const Projects = () => {
       <h2 className={styles.heading} data-aos="fade-right">
         Projects
       </h2>
+      <div
+        className={styles.content}
+        data-aos="fade-up"
+        data-aos-delay="200"
+      ></div>
       <div className={styles.grid}>
         {projects.map((project, index) => (
           <div
