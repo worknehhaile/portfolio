@@ -131,11 +131,11 @@ body.dark .card {
   animation: fadeIn 0.3s ease-in-out;
 }
 
-.modal img {
+/* .modal img {
   max-width: 100%;
   border-radius: 10px;
   margin-bottom: 1rem;
-}
+} */
 
 .modal a {
   display: inline-block;
