@@ -1,12 +1,21 @@
+body {
+  padding-top: 60px; /* Match the navbar height (adjust if needed) */
+  width: 100%;
+  margin: 0;
+}
 .navbar {
+  position: fixed; /* Makes the navbar stay at the top */
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #1e1e2f;
   padding: 1rem 2rem;
   color: white;
-  position: relative;
-  z-index: 10;
+  z-index: 1000; /* Ensures it's above other content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
 }
 
 .logo {
@@ -18,7 +27,8 @@
 .navLinks {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
+  margin-right: 70px;
 }
 
 .navLinks li a {
