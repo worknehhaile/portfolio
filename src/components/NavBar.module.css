@@ -10,7 +10,9 @@
   width: 100%; /* Add this to make it span the full width */
   z-index: 10;
 }
-
+body {
+  padding-top: 5rem; /* Adjust this value to match the height of your navbar */
+}
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -18,9 +20,15 @@
 
 /* Default nav for desktop */
 .navLinks {
+  top: 0;
+  left: 0;
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  position: fixed;
+  height: 100vh;
+  z-index: 15;
+  transform: translateX(100%);
 }
 
 .navLinks li a {
@@ -45,6 +53,7 @@
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
+  z-index: 20;
 }
 
 .bar,
@@ -61,7 +70,7 @@
     display: flex;
   }
 
-  .navLinks {
+  /* .navLinks {
     position: absolute;
     top: 100%;
     left: 0;
@@ -72,9 +81,10 @@
     gap: 1rem;
     display: none;
     padding: 1rem 0;
-  }
+  } */
 
   .navLinks.show {
     display: flex;
+    transform: translateX(0);
   }
 }
