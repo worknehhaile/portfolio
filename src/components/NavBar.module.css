@@ -1,16 +1,9 @@
 .navbar {
-  position: fixed; /* Makes the navbar stay at the top */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #1e1e2f;
-  padding: 1rem 2rem;
-  color: white;
-  z-index: 1000; /* Ensures it's above other content */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: adds subtle shadow */
+  z-index: 1000;
 }
 
 .logo {
@@ -18,11 +11,18 @@
   font-weight: bold;
 }
 
-/* Default nav for desktop */
 .navLinks {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+  position: fixed;
+  top: 60px; /* Adjust depending on navbar height */
+  left: 0;
+  width: 100%;
+  background-color: #1e1e2f;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 0;
+  display: none;
+  z-index: 999;
 }
 
 .navLinks li a {
@@ -40,7 +40,6 @@
   color: #00d8ff;
   border-bottom: 2px solid #00d8ff;
 }
-
 /* Hamburger menu */
 .hamburger {
   display: none;
@@ -48,32 +47,17 @@
   cursor: pointer;
   gap: 5px;
 }
-
-.bar,
-.barOpen {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  transition: all 0.3s ease;
-}
-
 /* Responsive nav menu for mobile */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
   }
-
-  .navLinks {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #1e1e2f;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    display: none;
-    padding: 1rem 0;
+  .bar,
+  .barOpen {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
   }
 
   .navLinks.show {
