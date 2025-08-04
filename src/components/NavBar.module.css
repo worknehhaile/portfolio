@@ -1,8 +1,3 @@
-body {
-  padding-top: 60px; /* Match the navbar height (adjust if needed) */
-  width: 100%;
-  margin: 0;
-}
 .navbar {
   position: fixed; /* Makes the navbar stay at the top */
   top: 0;
@@ -27,8 +22,7 @@ body {
 .navLinks {
   list-style: none;
   display: flex;
-  gap: 1rem;
-  /* margin-right: 70px; */
+  gap: 1.5rem;
 }
 
 .navLinks li a {
@@ -70,8 +64,8 @@ body {
   }
 
   .navLinks {
-    position: fixed;
-    top: 60px; /* Match navbar height */
+    position: absolute;
+    top: 100%;
     left: 0;
     background-color: #1e1e2f;
     width: 100%;
@@ -80,7 +74,6 @@ body {
     gap: 1rem;
     display: none;
     padding: 1rem 0;
-    z-index: 999; /* Make sure it's above other content */
   }
 
   .navLinks.show {
