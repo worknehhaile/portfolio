@@ -28,7 +28,7 @@ body {
   list-style: none;
   display: flex;
   gap: 1rem;
-  margin-right: 70px;
+  /* margin-right: 70px; */
 }
 
 .navLinks li a {
