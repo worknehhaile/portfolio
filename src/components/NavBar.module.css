@@ -5,14 +5,11 @@
   background-color: #1e1e2f;
   padding: 1rem 2rem;
   color: white;
-  position: fixed; /* Change this from 'relative' */
-  top: 0; /* Add this to pin it to the top of the viewport */
-  width: 100%; /* Add this to make it span the full width */
+  position: relative;
   z-index: 10;
+  /* position: fixed; */
 }
-body {
-  padding-top: 5rem; /* Adjust this value to match the height of your navbar */
-}
+
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -20,15 +17,9 @@ body {
 
 /* Default nav for desktop */
 .navLinks {
-  top: 0;
-  left: 0;
   list-style: none;
   display: flex;
   gap: 1.5rem;
-  position: fixed;
-  height: 100vh;
-  z-index: 15;
-  transform: translateX(100%);
 }
 
 .navLinks li a {
@@ -53,7 +44,6 @@ body {
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
-  z-index: 20;
 }
 
 .bar,
@@ -70,7 +60,7 @@ body {
     display: flex;
   }
 
-  /* .navLinks {
+  .navLinks {
     position: absolute;
     top: 100%;
     left: 0;
@@ -81,10 +71,9 @@ body {
     gap: 1rem;
     display: none;
     padding: 1rem 0;
-  } */
+  }
 
   .navLinks.show {
     display: flex;
-    transform: translateX(0);
   }
 }
