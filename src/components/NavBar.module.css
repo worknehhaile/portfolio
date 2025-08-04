@@ -5,9 +5,10 @@
   background-color: #1e1e2f;
   padding: 1rem 2rem;
   color: white;
-  position: relative;
+  position: fixed; /* Change this from 'relative' */
+  top: 0; /* Add this to pin it to the top of the viewport */
+  width: 100%; /* Add this to make it span the full width */
   z-index: 10;
-  /* position: fixed; */
 }
 
 .logo {
