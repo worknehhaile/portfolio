@@ -10,10 +10,10 @@ const About = () => {
         </h2>
         <div className={styles.content} data-aos="fade-up" data-aos-delay="200">
           <p>
-            I'm a passionate front-end developer with a dual background in
+            I'm a passionate full-stack developer with a dual background in
             Information Technology and Business Management. I specialize in
             creating responsive and interactive websites using HTML, CSS,
-            JavaScript, and React.
+            JavaScript,React, Nodejs, MongoDb and MySQL.
           </p>
           <p>
             My mission is to build seamless digital experiences that are both

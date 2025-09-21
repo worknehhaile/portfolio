@@ -6,10 +6,12 @@ const skills = [
   "CSS",
   "JavaScript",
   "React",
+  "Nodejs",
+  "MongoDb",
+  "MySQL",
   "Git",
   "Responsive Design",
   "GitHub",
-  "Figma",
 ];
 
 const Skills = () => {

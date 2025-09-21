@@ -11,10 +11,10 @@ const Home = () => {
         <h1>
           Hello, I'm <span className={styles.name}>Wokneh Haile</span>
         </h1>
-        <h2 className={styles.typewriter}>A Front-End Developer</h2>
+        <h2 className={styles.typewriter}>A Full-Stack Developer</h2>
         <p>
           I build clean, responsive, and user-friendly web interfaces using
-          HTML, CSS, JavaScript, and React.
+          HTML, CSS, JavaScript, React, Nodejs, MongoDb and MySQL.
         </p>
 
         <div className={styles.socials}>
